@@ -12,5 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'Home';
 });
+Route::get('/usuarios', 'UserController@index');
+Route::get('/usuarios/{id}', 'UserController@show')->where("id", "[0-9]+");
+Route::get('/usuarios/nuevo', 'Usercontroller@create');
+Route::get('/saludo/{name}', 'WelcomeUserController@welcomeName');
+Route::get('/saludo/{name}/{nickname}', 'WelcomeUserController@welcomeNameNickname');
+Route::get('usuarios/{id}/edit', 'UserController@edit')->where('id', '[0-9]+');
