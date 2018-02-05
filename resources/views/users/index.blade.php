@@ -6,7 +6,7 @@
         <hr />
             <ul>
                 @forelse($users as $user)
-                    <li>{{ $user->name }}, {{ $user->email }}</li>
+                    <li><a href="usuarios/{{ $user->id }}">{{ $user->name }}, {{ $user->email }}</a></li>
                 @empty
                     <li>No hay usuarios registrados</li>
                 @endforelse
