@@ -15,11 +15,13 @@ use App\Profession;
 */
 
 $factory->define(App\User::class, function (Faker $faker) {
+
+    $profession_id = Profession::all()->random(1)->first()->id;
     return [
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
-        'profession_id'=> Profession::all()->random(1)->first()->id,
+        'profession_id'=> $profession_id,
         'remember_token' => str_random(10),
     ];
 });

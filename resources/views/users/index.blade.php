@@ -2,11 +2,14 @@
 @section('activeHome', 'active')
 @section('title', 'Listado de Usuarios')
 @section('content')
-        <h1>{{ $title }}</h1>
+        <h1>Listado de Usuarios</h1>
         <hr />
             <ul>
                 @forelse($users as $user)
-                    <li><a href="usuarios/{{ $user->id }}">{{ $user->name }}, {{ $user->email }}</a></li>
+                    <li>
+                        {{ $user->name }}, {{ $user->email }}
+                        <a href="{{ route('users.show', ['id'=>$user->id]) }}">Ver Detalles</a>
+                    </li>
                 @empty
                     <li>No hay usuarios registrados</li>
                 @endforelse

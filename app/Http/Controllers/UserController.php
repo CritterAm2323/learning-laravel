@@ -9,28 +9,35 @@ class UserController extends Controller
 {
     public function index() 
     {
-        if(request()->has('empty')) {
-            $users = [];
-        } else {
-            $users = User::all();
-        }
-        $title = 'Listado de Usuarios';
-        return view('users.index',compact('users', 'title'));
+        $users = User::all();
+        return view('users.index',compact('users'));
     }
-    public function show($id)
+    public function show(User $user)
     {
-        $user = User::find($id);
-        $title = 'Detalles de Usuario';
         return view('users.show', compact('user', 'title'));
     }
     public function create()
     {
-        $title = "Creando un nuevo usuario";
-        return view('users.create', compact('title'));
+        return view('users.create');
     }
-    public function edit($id)
+    public function edit(User $user)
     {
-        $title = "Editar Usuario";
-        return view('users.edit', compact('id', 'title'));
+        return view('users.edit', compact('user'));
+    }
+    public function store()
+    {
+        $data = request()->validate([
+            'name'=>'required',
+            'email'=>'',
+            'password'=>'',
+        ], [
+            'name.required'=>'El campo nombre es obligatorio',
+        ]);
+        User::create([
+            'name'=>$data['name'],
+            'email'=>$data['email'],
+            'password'=>bcrypt($data['password'])
+        ]);
+        return redirect()->route('users');
     }
 }

@@ -14,9 +14,13 @@
 Route::get('/', function () {
     return 'Home';
 });
-Route::get('/usuarios', 'UserController@index');
-Route::get('/usuarios/{id}', 'UserController@show')->where("id", "[0-9]+");
-Route::get('/usuarios/nuevo', 'Usercontroller@create');
-Route::get('/saludo/{name}', 'WelcomeUserController@welcomeName');
-Route::get('/saludo/{name}/{nickname}', 'WelcomeUserController@welcomeNameNickname');
-Route::get('usuarios/{id}/edit', 'UserController@edit')->where('id', '[0-9]+');
+Route::get('/usuarios', 'UserController@index')
+    ->name('users');
+Route::get('/usuarios/{user}', 'UserController@show')->where("user", "[0-9]+")
+    ->name('users.show');
+Route::get('/usuarios/nuevo', 'UserController@create')
+    ->name('users.create');
+Route::post('/usuarios/create', 'UserController@store')
+    ->name('users.store');
+Route::get('/usuarios/{user}/edit', 'UserController@edit')->where('user', '[0-9]+')
+    ->name('users.edit');
