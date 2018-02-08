@@ -38,7 +38,7 @@
       <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/users/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
+            <state relative-caret-position="502">
               <caret line="34" column="16" lean-forward="false" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
               <folding>
                 <marker date="1517980882000" expanded="true" signature="9:17" ph="..." />
@@ -429,12 +429,12 @@
       <workItem from="1517675223969" duration="4015000" />
       <workItem from="1517798823341" duration="114000" />
       <workItem from="1517878272267" duration="1643000" />
-      <workItem from="1517969828542" duration="8405000" />
+      <workItem from="1517969828542" duration="8508000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24043000" />
+    <option name="totallyTimeSpent" value="24146000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="957" extended-state="0" />
@@ -939,7 +939,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/users/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
+        <state relative-caret-position="502">
           <caret line="34" column="16" lean-forward="false" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
           <folding>
             <marker date="1517980882000" expanded="true" signature="9:17" ph="..." />
