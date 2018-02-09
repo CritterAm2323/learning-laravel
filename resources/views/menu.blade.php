@@ -6,16 +6,10 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item @yield('activeHome')">
-              <a class="nav-link" href="/usuarios">Home</a>
+              <a class="nav-link" href="/usuarios">Usuarios</a>
             </li>
             <li class="nav-item @yield('activeNuevo')">
               <a class="nav-link" href="/usuarios/nuevo">Crear</a>
-            </li>
-            <li class="nav-item @yield('activeDetalles')">
-              <a class="nav-link" href="/usuarios/10">Detalles</a>
-            </li>
-            <li class="nav-item @yield('activeEditar')">
-              <a class="nav-link" href="/usuarios/10/edit">Editar</a>
             </li>
           </ul>
           <form class="form-inline mt-2 mt-md-0">

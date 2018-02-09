@@ -17,22 +17,10 @@
             {!! csrf_field() !!}
             <label for="nombre">Nombre: </label>
             <input type="text" value="{{ old('name') }}" id="nombre" name="name" /><br>
-            @if ($errors->has('name'))
-                {{ $errors->first('name') }}
-            @endif
-            <br>
             <label for="email">Email: </label>
             <input type="email" id="email" name="email" value="{{ old('email') }}" /><br>
-            @if ($errors->has('email'))
-                {{ $errors->first('email') }}
-            @endif
-            <br>
             <label for="password">Password: </label>
-            <input type="password" id="password" name="password" placeholder="Mayor a 8 caracteres" "/><br>
-            @if ($errors->has('password'))
-                {{ $errors->first('password') }}
-            @endif
-            <br>
+            <input type="password" id="password" name="password" placeholder="Mayor a 6 caracteres" "/><br>
             <input type="submit" value="Crear Usuario" />
         </form>
     @endsection

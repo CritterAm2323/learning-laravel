@@ -1,5 +1,4 @@
 @extends('layout')
-    @section('activeDetalles', 'active')
     @section('title', 'Detalles de un Usuario')
     @section('content')
         <h1>Detalles de Usuario</h1>
